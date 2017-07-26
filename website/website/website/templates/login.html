@@ -1,0 +1,43 @@
+{% extends "base_site.html" %}
+
+{% block title %} Login {% endblock title %}
+
+{% block stylesheets %}
+  {{ block.super }}
+  <!-- Animate.css -->
+  <link href="/static/vendors/animate.css/animate.min.css" rel="stylesheet">
+{% endblock stylesheets %}
+
+{% block body_class %}login{% endblock body_class %}
+
+{% block body %}
+  <div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
+
+    <div class="login_wrapper">
+      <div class="animate form login_form">
+        <section class="login_content">
+          <form action="user_check" method="post">
+            <h1>Bitmain  Devops</h1>
+            <div>
+              <input type="text" class="form-control" name="username" placeholder="Username" required="required" />
+            </div>
+            <div>
+              <input type="password" class="form-control" name="password" placeholder="Password" required="required" />
+            </div>
+            <div>
+              <button type="submit" class="btn btn-success">Log in</button>
+            </div>
+
+            <div class="clearfix"></div>
+
+          </form>
+        </section>
+      </div>
+
+      
+    </div>
+  </div>
+{% endblock body %}
+
